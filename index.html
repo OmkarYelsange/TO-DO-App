@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨ Cosmic Tasks | Your Ultimate To-Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="light-mode">
+    <div class="theme-toggle-container">
+      <button id="themeToggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+    </div>
+
+    <div class="app-container">
+      <header class="app-header">
+        <h1><span>TO-DO App</span></h1>
+        <p class="subtitle">Complete Tasks According to Your Set Time</p>
+        <div class="header-decoration">
+          <div class="decoration-star"><i class="fas fa-star"></i></div>
+          <div class="decoration-star"><i class="fas fa-star"></i></div>
+          <div class="decoration-star"><i class="fas fa-star"></i></div>
+        </div>
+      </header>
+
+      <div class="todo-container">
+        <form class="task-form" id="taskForm">
+          <div class="input-container">
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="What's your next mission?"
+              autocomplete="off"
+              required
+            />
+            <button type="submit" class="add-btn">
+              <i class="fas fa-paper-plane"></i> Launch Task
+            </button>
+          </div>
+        </form>
+
+        <div class="task-controls">
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+              <i class="fas fa-globe"></i> All
+            </button>
+            <button class="filter-btn" data-filter="active">
+              <i class="fas fa-bolt"></i> Active
+            </button>
+            <button class="filter-btn" data-filter="completed">
+              <i class="fas fa-check-circle"></i> Done
+            </button>
+          </div>
+          <button class="clear-btn" id="clearCompleted">
+            <i class="fas fa-broom"></i> Clear Completed
+          </button>
+        </div>
+
+        <ul class="task-list" id="taskList">
+          <!-- Tasks will be added here dynamically -->
+        </ul>
+
+        <div class="task-stats">
+          <span id="tasksRemaining">0 missions awaiting</span>
+          <div class="progress-bar">
+            <div class="progress" id="progressBar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
